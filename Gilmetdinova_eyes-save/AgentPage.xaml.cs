@@ -241,7 +241,6 @@ namespace Gilmetdinova_eyes_save
                 {
                     PageListBox.Items.Add(i);
                 }
-               
 
                 AgentListView.ItemsSource = CurrentPageList;
 
