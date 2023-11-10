@@ -270,5 +270,20 @@ namespace Gilmetdinova_eyes_save
             ChangePage(0, Convert.ToInt32(PageListBox.SelectedItem.ToString())-1);
             
         }
+
+        private void AddEditButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage((sender as Button).DataContext as Agent));
+        }
+
+        private void AddPage_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddEditPage());
+        }
+
+        private void Grid_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            UpdateAgent();
+        }
     }
 }

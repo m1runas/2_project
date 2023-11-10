@@ -8,7 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AgentPage">
 
-    <Grid>
+    <Grid IsVisibleChanged="Grid_IsVisibleChanged">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
@@ -58,6 +59,7 @@
                 </ComboBox>
             </StackPanel>
         </WrapPanel>
+        <Button Name="AddPage" Content="Добавить" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Click="AddPage_Click"></Button>
         
         <ListView Name="AgentListView" Grid.Row="2">
             <ListView.ItemTemplate>
@@ -100,8 +102,10 @@
                         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" >
                             <TextBlock Text="Приоритет: " Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                             <TextBlock Text="{Binding Priority}" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" FontSize="16"></TextBlock>
+                            <Button Name="AddEditButton" Content="Редактировать" HorizontalAlignment="Right" FontSize="20" Grid.Column="1" Grid.Row="3" Width="180" Click="AddEditButton_Click"></Button>
                         </StackPanel>
                         
+
                     </Grid>
 
                 </DataTemplate>
