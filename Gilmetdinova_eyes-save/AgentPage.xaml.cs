@@ -229,8 +229,10 @@ namespace Gilmetdinova_eyes_save
                             Ifupdate = false;
                         }
                         break;
+
                 }
             }
+        
             if (Ifupdate)
             {
                 PageListBox.Items.Clear();
@@ -239,7 +241,7 @@ namespace Gilmetdinova_eyes_save
                 {
                     PageListBox.Items.Add(i);
                 }
-            
+               
 
                 AgentListView.ItemsSource = CurrentPageList;
 
@@ -247,7 +249,11 @@ namespace Gilmetdinova_eyes_save
             }
         }
     
+
         
+
+
+
         private void LeftDirButton_Click(object sender, RoutedEventArgs e)
         {
             ChangePage(1, null);
