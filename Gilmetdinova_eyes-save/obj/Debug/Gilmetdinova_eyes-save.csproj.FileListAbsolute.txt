@@ -79,3 +79,4 @@ D:\3 курс\ИСП-3121\Гильметдинова Руслана\локал\G
 D:\3 курс\ИСП-3121\Гильметдинова Руслана\локал\Gilmetdinova_eyes-save\obj\Debug\Gilmetdinova_eyes-save.csproj.CopyComplete
 D:\3 курс\ИСП-3121\Гильметдинова Руслана\локал\Gilmetdinova_eyes-save\obj\Debug\Gilmetdinova_eyes-save.exe
 D:\3 курс\ИСП-3121\Гильметдинова Руслана\локал\Gilmetdinova_eyes-save\obj\Debug\Gilmetdinova_eyes-save.pdb
+D:\3 курс\ИСП-3121\Гильметдинова Руслана\локал\Gilmetdinova_eyes-save\obj\Debug\PriorWindow.g.cs

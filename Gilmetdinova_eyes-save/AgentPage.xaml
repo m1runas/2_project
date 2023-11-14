@@ -61,7 +61,7 @@
         </WrapPanel>
         <Button Name="AddPage" Content="Добавить" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Click="AddPage_Click"></Button>
         
-        <ListView Name="AgentListView" Grid.Row="2">
+        <ListView Name="AgentListView" Grid.Row="2" SelectionChanged="AgentListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -103,6 +103,7 @@
                             <TextBlock Text="Приоритет: " Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                             <TextBlock Text="{Binding Priority}" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" FontSize="16"></TextBlock>
                             <Button Name="AddEditButton" Content="Редактировать" HorizontalAlignment="Right" FontSize="20" Grid.Column="1" Grid.Row="3" Width="180" Click="AddEditButton_Click"></Button>
+                            <Button Name="ChangePriory" Content="Изменить приоритет" HorizontalAlignment="Right" FontSize="20" Grid.Column="2" Grid.Row="3" Width="180" Click="ChangePriory_Click"></Button>
                         </StackPanel>
                         
 

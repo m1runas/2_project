@@ -285,5 +285,44 @@ namespace Gilmetdinova_eyes_save
         {
             UpdateAgent();
         }
+
+        private void ChangePriory_Click(object sender, RoutedEventArgs e)
+        {
+            PriorWindow window = new PriorWindow();
+            window.ShowDialog();
+            if (string.IsNullOrEmpty(window.PriorityBox.Text))
+            {
+                return;
+            }
+            foreach (Agent AgentLV in AgentListView.SelectedItems)
+            {
+                AgentLV.Priority = Convert.ToInt32(window.PriorityBox.Text);
+            }
+            try
+            {
+                Gilmetdinova_eyesEntities.GetContext().SaveChanges();
+                MessageBox.Show("Информация сохранена");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+            UpdateAgent();
+        }
+
+        private void AgentListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (AgentListView.SelectedItems.Count >1) 
+            {
+                ChangePriory.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ChangePriory.Visibility = Visibility.Hidden;
+            }
+        }
+
+       
+        }
     }
-}
+
